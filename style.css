@@ -1,0 +1,430 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Poppins','sans-serif';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.name {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.name:hover {
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+nav a:hover, nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media (max-width: 995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: black;
+        border-top: 0.1rem solid black;
+    }
+
+    nav.active{
+        display: block ;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    background-color: black;
+    margin-bottom: 1rem;
+}
+
+.home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #b74b4b;
+}
+
+.home-content h3{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.home img{
+    border-radius: 50%;
+    width: 25vw;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
+
+.icons a i, .icons a svg {
+    font-size: 5rem; 
+    color: #b74b4b;
+}
+
+.icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 50%;
+    margin: .5rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: transparent;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: .3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    width: 21%;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text span {
+    position: relative;
+
+}
+
+.text span::before {
+    content: IT Student;
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.text span::after {
+    content: "";
+    color: #000000;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "IT Student";
+    }
+    21%, 40% {
+        content: "IT Student";
+    }
+    41%, 60% {
+        content: "IT Student";
+    }
+    61%, 80% {
+        content: "IT Student";
+    }
+    81%, 100% {
+        content: "IT Student";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 996px){
+    .home{
+       flex-direction: column;
+       margin: 5rem 4rem;
+    }
+
+    .home.home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home.home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}
+
+.info {
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: -30rem;
+
+}
+
+.info h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: #b74b4b;
+    font-weight: 700;
+}
+
+.info ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+.info li {
+    margin-bottom: 5rem;
+}
+
+.info li strong {
+    color: #b74b4b;
+}
+
+
+
+.skill-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.skills-info h2 {
+    margin-bottom: 20px;
+}
+
+.skills-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: white;
+}
+
+.skills-info h2 {
+    margin-bottom: 20px;
+    font-size: 50px; 
+    font-weight: bold; 
+    color: #ffffff; 
+}
+
+.skill i {
+    font-size: 80px; 
+    color: #b74b4b; 
+    transition: color 0.3s;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.skill:hover p {
+    color: black;
+}
+.skill:hover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
+.skill:hover i {
+    color: #333;
+}
+
+
+.proj-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.proj-info h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.proj-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proj {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: white;
+    background-color: #1e1e1e; /* Ensure background color is consistent with the .skill */
+}
+
+.proj p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center; /* Center text horizontally */
+}
+
+.proj:hover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
+.proj:hover p {
+    color: black;
+}
